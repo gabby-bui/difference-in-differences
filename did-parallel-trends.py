@@ -49,6 +49,7 @@ plt.xlabel('Time (Year)')
 plt.ylabel('Mean Outcome (Log Capital Raised)')
 plt.title('Pre-treatment Trends')
 plt.legend()
+plt.savefig('pre-treatment-trends.png')
 plt.show()
 
 #Test for parallel trends
