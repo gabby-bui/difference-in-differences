@@ -38,8 +38,8 @@ means = data.groupby(['treatment', 'time'])['outcome'].mean().unstack()
 #Plot pre-treatment trends
 pre_treatment_years = [y for y in means.columns if y < 2020 and y >= 2012]
 plt.figure(figsize=(10, 6))
-plt.plot(pre_treatment_years, means.loc[0, pre_treatment_years], 'b-o', label='Control Group (B2C)')
-plt.plot(pre_treatment_years, means.loc[1, pre_treatment_years], 'r-o', label='Treatment Group (B2B)')
+plt.plot(pre_treatment_years, means.loc[0, pre_treatment_years], 'b-o', label='Control Group (Diversified)')
+plt.plot(pre_treatment_years, means.loc[1, pre_treatment_years], 'r-o', label='Treatment Group (Specialized)')
 plt.xlabel('Time period')
 plt.ylabel('Probability of receiving funding')
 plt.title('Pre-treatment Trends')
